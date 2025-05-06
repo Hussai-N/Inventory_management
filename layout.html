@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="{{ url_for('home') }}">Inventory Management</a>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="{{ url_for('view_products') }}">View Products</a>
+                <a class="nav-item nav-link" href="{{ url_for('add_product') }}">Add Product</a>
+                <a class="nav-item nav-link" href="{{ url_for('add_movement') }}">Add Movement</a>
+                <a class="nav-item nav-link" href="{{ url_for('view_report') }}">View Report</a>
+            </div>
+        </nav>
+
+        
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

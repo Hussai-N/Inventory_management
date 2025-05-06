@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="text-center">Add New Location</h1>
+<form method="POST">
+    {{ form.hidden_tag() }}
+    <div class="form-group">
+        {{ form.location_id.label }}
+        {{ form.location_id(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.name.label }}
+        {{ form.name(class="form-control") }}
+    </div>
+    <div class="form-group">
+        {{ form.address.label }}
+        {{ form.address(class="form-control") }}
+    </div>
+    <button type="submit" class="btn btn-primary">Add Location</button>
+</form>
+{% endblock %}
